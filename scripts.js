@@ -22,7 +22,7 @@ let crossOutButton = $('<crossOutButton></crossOutButton>');
 crossOutButton.append(document.createTextNode('X'));
 li.append(crossOutButton);
 
-//Click and Add class delete
+//Click and Add class delete:
 crossOutButton.on('click', function(){
   li.addClass('delete');
 });
