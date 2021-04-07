@@ -15,19 +15,19 @@ function newItem() {
   }
 
 //Crossing out an item from the list of items:
-  li.on('dblclick', function(){
+li.on('dblclick', function(){
   li.toggleClass('strike');
   });
 
 // Adding the delete button "X":
-let crossOutButton = $('<crossOutButton></crossOutButton>');
-crossOutButton.append(document.createTextNode('X'));
-li.append(crossOutButton);
+ let crossOutButton = $('<crossOutButton></crossOutButton>');
+  crossOutButton.append(document.createTextNode('X'));
+  li.append(crossOutButton);
 
-//Click and Add class delete:
-crossOutButton.on('click', function(){
-  li.addClass('delete');
-});
+crossOutButton.on("click", deleteListItem);
+ function deleteListItem(){
+	li.addClass("delete")
+}
 
 //Reordering the items:
   $('#list').sortable();
